@@ -1,4 +1,4 @@
-package anullihate.primalgamescore.generator;
+package dev.anullihate.primalgamescore.generator;
 
 import cn.nukkit.level.ChunkManager;
 import cn.nukkit.level.generator.Generator;

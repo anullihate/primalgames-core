@@ -6,10 +6,16 @@
 
     <groupId>dev.anullihate</groupId>
     <artifactId>PrimalGamesCore</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0</version>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
 
     <build>
-        <defaultGoal>install</defaultGoal>
+        <defaultGoal>clean package</defaultGoal>
         <sourceDirectory>${basedir}/src/main/java</sourceDirectory>
         <plugins>
             <plugin>
@@ -36,8 +42,12 @@
 
     <repositories>
         <repository>
-            <id>nukkitx</id>
-            <url>https://repo.nukkitx.com/main</url>
+            <id>nukkitx-repo</id>
+            <url>http://repo.nukkitx.com/maven-snapshots/</url>
+        </repository>
+        <repository>
+            <id>releases</id>
+            <url>http://lucgameshd.de:8081/content/repositories/releases</url>
         </repository>
     </repositories>
 
@@ -47,6 +57,19 @@
             <artifactId>nukkit</artifactId>
             <version>1.0-SNAPSHOT</version>
             <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>de.theamychan</groupId>
+            <artifactId>ScoreboardAPI</artifactId>
+            <version>1.3</version>
+        </dependency>
+        <dependency>
+            <groupId>com.creeperface.nukkit</groupId>
+            <artifactId>PlaceholderAPI</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <optional>false</optional>
+            <scope>system</scope>
+            <systemPath>${basedir}/lib/PlaceholderAPI.jar</systemPath>
         </dependency>
     </dependencies>
 </project>
